@@ -1,34 +1,13 @@
 import React, { Component } from "react";
+import TableComponent from './SimpleComponent'
 
 // Class Component
 class Table extends Component{
     render(){
         return( 
             <table>
-                <thead>
-          <tr>
-            <th>Name</th>
-            <th>Job</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Charlie</td>
-            <td>Janitor</td>
-          </tr>
-          <tr>
-            <td>Mac</td>
-            <td>Bouncer</td>
-          </tr>
-          <tr>
-            <td>Dee</td>
-            <td>Aspiring actress</td>
-          </tr>
-          <tr>
-            <td>Dennis</td>
-            <td>Bartender</td>
-          </tr>
-        </tbody>
+              <TableComponent.TableHeader/>
+              <TableComponent.SimpleComponent/>
             </table>
         )
     }
