@@ -1,6 +1,5 @@
 import React from 'react'
 import Table from './Table'
-import TableComponent from './SimpleComponent'
 
 class App extends React.Component {
   
