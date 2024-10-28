@@ -1,14 +1,30 @@
 import React from 'react'
 import Table from './Table'
 
-class App extends React.Component {
+class App extends React.Component{
   
   render() {
-    let name = "Adnan"
+    const characters = [ // Define the characters array here
+        {
+            name: 'Charlie',
+            job: 'Janitor',
+        },
+        {
+            name: 'Mac',
+            job: 'Bouncer',
+        },
+        {
+            name: 'Dee',
+            job: 'Aspiring actress',
+        },
+        {
+            name: 'Dennis',
+            job: 'Bartender',
+        }
+    ];
     return(
       <div className='container'>
-        <h1>Hello {name}</h1>
-        <Table/>
+        <Table characterData={characters}/>
       </div>
     )
   }

@@ -1,44 +1,31 @@
 import React, { Component } from "react";
 
-// Simple Component
-const TableHeader = () => {
-    return(
-        <thead>
-        <tr>
-          <th>Name</th>
-          <th>Job</th>
-        </tr>
-      </thead>
-    )
-}
- 
-// simple Component
-const SimpleComponent = () =>{
-    return(
-        <table>
-<tbody>
-  <tr>
-    <td>Adnan</td>
-    <td>Software Engineer</td>
-  </tr>
-  <tr>
-    <td>Naresh</td>
-    <td>Software Developer</td>
-  </tr>
- 
-</tbody>
-    </table>
-    )
-}
+
 
 // Class Component
 class Table extends Component{
+    
     render(){
+        const {characterData} = this.props; // Destructure the prop
         return( 
-            <table>
-              <TableHeader/>
-              <SimpleComponent/>
-            </table>
+           <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Job</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        characterData.map((character,index) => (
+                            <tr key={index}>
+                                <td>{character.name}</td>
+                                <td>{character.job}</td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+           </table>
         )
     }
 }
