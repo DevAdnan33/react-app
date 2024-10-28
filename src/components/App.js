@@ -1,33 +1,40 @@
-import React from 'react'
-import Table from './Table'
+import React, { useState } from 'react';
+import Table from './Table';
 
-class App extends React.Component{
-  
-  render() {
-    const characters = [ // Define the characters array here
-        {
-            name: 'Charlie',
-            job: 'Janitor',
-        },
-        {
-            name: 'Mac',
-            job: 'Bouncer',
-        },
-        {
-            name: 'Dee',
-            job: 'Aspiring actress',
-        },
-        {
-            name: 'Dennis',
-            job: 'Bartender',
-        }
-    ];
-    return(
-      <div className='container'>
-        <Table characterData={characters}/>
-      </div>
-    )
+const App = () => {
+
+  const [count, setCount] = useState(0)
+
+  function updateCount() {
+    setCount(count + 1)
   }
-}
+
+  const characters = [
+    {
+      name: 'Charlie',
+      job: 'Janitor',
+    },
+    {
+      name: 'Mac',
+      job: 'Bouncer',
+    },
+    {
+      name: 'Dee',
+      job: 'Aspiring actress',
+    },
+    {
+      name: 'Dennis',
+      job: 'Bartender',
+    }
+  ];
+
+  return (
+    <div className='container'>
+      <Table characterData={characters} />
+      <h1>Count {count}</h1>
+      <button onClick={updateCount}>Click Me</button>
+    </div>
+  );
+};
 
 export default App;
