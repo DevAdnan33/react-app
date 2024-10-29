@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Table from './Table';
 import Form from './Form'
+import Todo from './Todo'
 
 const App = () => {
 
@@ -35,6 +36,7 @@ const App = () => {
       <h1>Count {count}</h1>
       <button onClick={updateCount}>Click Me</button>
       <Form/>
+      <Todo></Todo>
     </div>
   );
 };
