@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Table from './Table';
+import Form from './Form'
 
 const App = () => {
 
@@ -33,6 +34,7 @@ const App = () => {
       <Table characterData={characters} />
       <h1>Count {count}</h1>
       <button onClick={updateCount}>Click Me</button>
+      <Form/>
     </div>
   );
 };
