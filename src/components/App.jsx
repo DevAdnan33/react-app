@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Table from './Table';
 import Form from './Form'
 import Todo from './Todo'
+import RandomJokesApi from './RadnomJokesApi'
 
 const App = () => {
 
@@ -37,6 +38,7 @@ const App = () => {
       <button onClick={updateCount}>Click Me</button>
       <Form/>
       <Todo></Todo>
+      <RandomJokesApi/>
     </div>
   );
 };
